@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+     font-family: "Inter", sans-serif;
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+:root{
+    --primary_orange: hsl(35, 77%, 62%);
+    --primary_red: hsl(5, 85%, 63%);
+    --neutral_Off-white: hsl(36, 100%, 99%);
+    --neutral_Grayish_blue: hsl(233, 8%, 79%);
+    --neutral_Dark-grayish-blue: hsl(236, 13%, 42%);
+    --neutral_Very_dark_blue: hsl(240, 100%, 5%);
+}
+.main{
+    padding: 4rem;
+    margin-bottom: 1rem;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+}
+ul li {
+   display: inline;
+   margin: 0 0.7rem;
+}
+ul li a{
+    text-decoration: none;
+    color: var(--neutral_Dark-grayish-blue);
+}
+a:hover{
+    color: var(--primary_red);
+}
+.header-logo{
+    width: 50px;
+}
+.first-container{
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    /* height: 90vh; */
+}
+.first{
+    height: 100%;
+    width: 70%;
+}
+.second{
+    background: var(--neutral_Very_dark_blue);
+    width: 30%;
+    padding: 1.5rem;
+    height: 100%;
+
+}
+.second h1{
+    color: var(--primary_orange);
+    margin-bottom: 1.5rem;
+    /* height: 100%; */
+}
+.second h4{
+    color: var(--neutral_Off-white);
+    margin: 1rem 0;
+    width: 100%;
+}
+.second h4:hover{
+    color: var(--primary_orange);
+    cursor: pointer;
+}
+.second p{
+    color: var(--neutral_Grayish_blue);
+    /* font-size: 15px; */
+    margin-bottom: 1.5rem;
+    line-height: 1.5rem;
+}
+.web3{
+    width: 100%;
+}
+.future-text{
+    display: flex;
+    margin-top: 1.5rem;
+    /* justify-content: space-between; */
+}
+.future-right{
+    width: 50%;
+}
+.future-left{
+width: 50%;
+}
+.future-text p{
+   width:90%;
+   line-height: 1.5rem;
+   color: var(--neutral_Dark-grayish-blue);
+}
+.future-text h1{
+    font-weight: 900;
+    width: 60%;
+    letter-spacing: 0.1rem; 
+    line-height: 2.5rem; 
+}
+button{
+    padding: 0.6rem 1.7rem;
+    background: var(--primary_red);
+    color: var(--neutral_Very_dark_blue);
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    
+    margin-top: 1rem;
+}
+button:hover{
+    background-color: var(--neutral_Very_dark_blue);
+    color: var(--neutral_Off-white);
+    cursor: pointer;
+}
+img{
+    width: 70px;
+}
+.second-container{
+    display: flex;
+    width: 100%;
+}
+.second-container h2{
+    color: var(--primary_red);
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+.second-container h4{
+    padding-bottom: 0.5rem;
+    color: var(--neutral_Very_dark_blue);
+    font-weight: 800;
+}
+.second-container h4:hover{
+    color: var(--primary_red);
+    cursor: pointer;
+}
+.second-container p{
+    color: var(--neutral_Dark-grayish-blue);
+}
+.second-div{
+    display: flex;
+    gap: 1.3rem;
+}
+.news{
+    width:65%;
+    line-height: 1.2rem;
+}
+.icon-menu,
+.web3-mobile,
+.close-icon{
+    display: none;
+}
+
+@media(max-width: 600px){
+    body{
+        position: relative;
+    }
+    .main{
+        padding: 2rem;
+
+    }
+    .icon-menu{
+        display: block;
+    }
+    header nav{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: hsla(240, 100%, 5%, 0.3);
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        transition: all 0.4s ease-in;
+        transform: translateX(-150%);
+    }
+    header nav ul{
+        background: white;
+        width: 80%;
+        padding: 1rem;
+    }
+    header nav ul li{
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+    .first-container{
+        flex-direction: column;
+    }
+    .web3-mobile{
+        display: block;
+        width: 100%;
+    }
+    .web3{
+        display: none;
+    }
+    .first,.second{
+        width: 100%;
+    }
+    .second{
+        margin: 2rem 0;
+    }
+    .future-text{
+        flex-direction: column;
+    }
+    .future-left{
+        margin-bottom: 1rem;
+    }
+    .future-left,.future-right{
+        width: 100%;
+    }
+    .second-container{
+        flex-direction: column;
+        gap: 1.2rem ;
+    }
+    .second-div{
+        width: 100%;
+    }
+    .close-icon{
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 15%;
+    }
+    .close-icon img{
+         width: 40px;
+    }
+    footer{
+        margin-top: 2rem;
+    }
+}
